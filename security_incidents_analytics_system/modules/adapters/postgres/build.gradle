@@ -5,4 +5,7 @@ dependencies {
     implementation libs.spring.jpa
 
     runtimeOnly libs.postgres
+
+    compileOnly libs.lombok
+    annotationProcessor libs.lombok
 }

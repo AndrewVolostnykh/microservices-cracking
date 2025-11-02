@@ -1,0 +1,8 @@
+package andrew_volostnykh.security_analytics.adapters.postgres.incidents;
+
+import andrew_volostnykh.security_analytics.application.incident.ports.IncidentPersistenceWriteRepositoryPort;
+
+public class IncidentPersistenceRepository
+	implements IncidentPersistenceWriteRepositoryPort {
+
+}
