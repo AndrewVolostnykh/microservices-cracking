@@ -1,0 +1,6 @@
+dependencies {
+    implementation project(':modules:application')
+    implementation project(':modules:domain')
+
+    implementation libs.spring.redis
+}

@@ -1,0 +1,17 @@
+rootProject.name = 'security_analytics'
+
+include 'modules:domain'
+include 'modules:application'
+include 'modules:adapters:kafka'
+include 'modules:adapters:postgres'
+include 'modules:adapters:redis'
+include 'modules:adapters:elastic'
+include 'modules:bootstrap'
+
+dependencyResolutionManagement {
+	versionCatalogs {
+		libs {
+			from(files("gradle/versions.deps.toml"))
+		}
+	}
+}

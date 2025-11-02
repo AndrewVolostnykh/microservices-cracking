@@ -1,0 +1,8 @@
+cluster.name: incident-cluster
+network.host: 0.0.0.0
+
+indices.query.bool.max_clause_count: 2048
+
+xpack.security.enabled: false
+xpack.ml.enabled: false
+xpack.monitoring.collection.enabled: true

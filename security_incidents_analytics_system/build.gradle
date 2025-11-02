@@ -1,0 +1,17 @@
+plugins {
+	id 'java'
+}
+
+allprojects {
+	group = "andrew_volostnykh"
+	version = "0.0.1"
+	repositories { mavenCentral() }
+}
+
+subprojects {
+	apply plugin: 'java'
+	java {
+		toolchain { languageVersion = JavaLanguageVersion.of(21) }
+	}
+	test { useJUnitPlatform() }
+}

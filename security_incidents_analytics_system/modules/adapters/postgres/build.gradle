@@ -1,0 +1,8 @@
+dependencies {
+    implementation project(':modules:domain')
+    implementation project(':modules:application')
+
+    implementation libs.spring.jpa
+
+    runtimeOnly libs.postgres
+}

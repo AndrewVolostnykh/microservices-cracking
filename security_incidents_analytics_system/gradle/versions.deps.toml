@@ -1,0 +1,54 @@
+[versions]
+spring-boot = "3.5.7"
+spring-dep-management = "1.1.7"
+lombok = "1.18.30"
+kafka = "3.7.0"
+postgres = "42.7.2"
+
+[libraries.spring-web]
+group = "org.springframework.boot"
+name = "spring-boot-starter-web"
+
+[libraries.spring-jpa]
+group = "org.springframework.boot"
+name = "spring-boot-starter-data-jpa"
+version.ref = "spring-boot"
+
+[libraries.spring-elastic]
+group = "org.springframework.boot"
+name = "spring-boot-starter-data-elasticsearch"
+version.ref = "spring-boot"
+
+[libraries.spring-redis]
+group = "org.springframework.boot"
+name = "spring-boot-starter-data-redis"
+version.ref = "spring-boot"
+
+[libraries.spring-test]
+group = "org.springframework.boot"
+name = "spring-boot-starter-test"
+
+# --- Other dependencies
+[libraries.kafka-streams]
+group = "org.apache.kafka"
+name = "kafka-streams"
+version.ref = "kafka"
+
+[libraries.postgres]
+group = "org.postgresql"
+name = "postgresql"
+version.ref = "postgres"
+
+[libraries.lombok]
+group = "org.projectlombok"
+name = "lombok"
+version.ref = "lombok"
+
+# --- Plugins
+[plugins.spring-boot]
+id = "org.springframework.boot"
+version.ref = "spring-boot"
+
+[plugins.spring-dep-management]
+id = "io.spring.dependency-management"
+version.ref = "spring-dep-management"

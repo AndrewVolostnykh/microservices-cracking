@@ -1,0 +1,26 @@
+plugins {
+    alias(libs.plugins.spring.boot)
+    alias(libs.plugins.spring.dep.management)
+    id 'java'
+}
+
+dependencies {
+    implementation project(':modules:domain')
+    implementation project(':modules:application')
+    implementation project(':modules:adapters:kafka')
+    implementation project(':modules:adapters:postgres')
+    implementation project(':modules:adapters:redis')
+    implementation project(':modules:adapters:elastic')
+
+    implementation libs.spring.web
+    implementation libs.spring.jpa
+    implementation libs.spring.elastic
+    implementation libs.spring.redis
+    implementation libs.kafka.streams
+
+    runtimeOnly libs.postgres
+    compileOnly libs.lombok
+    annotationProcessor libs.lombok
+
+    testImplementation libs.spring.test
+}
