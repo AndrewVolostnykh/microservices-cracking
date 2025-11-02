@@ -1,6 +1,18 @@
+plugins {
+    alias(libs.plugins.spring.boot)
+    alias(libs.plugins.spring.dep.management)
+    id 'java'
+}
+
 dependencies {
+
     implementation project(':modules:domain')
     implementation project(':modules:application')
 
+    implementation libs.spring.kafka
     implementation libs.kafka.streams
+    implementation libs.jackson.databind
+
+    compileOnly libs.lombok
+    annotationProcessor libs.lombok
 }

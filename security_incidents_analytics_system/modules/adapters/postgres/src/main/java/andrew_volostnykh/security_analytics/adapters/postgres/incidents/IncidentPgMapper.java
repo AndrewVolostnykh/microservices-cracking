@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 import java.time.Instant;
 
 @NoArgsConstructor(access = AccessLevel.PACKAGE)
-final class IncidentMapper {
+final class IncidentPgMapper {
 
 	public static IncidentEntity toEntity(Incident domain) {
 		IncidentEntity entity = new IncidentEntity();

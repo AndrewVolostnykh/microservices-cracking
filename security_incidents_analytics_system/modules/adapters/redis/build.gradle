@@ -3,4 +3,7 @@ dependencies {
     implementation project(':modules:domain')
 
     implementation libs.spring.redis
+
+    compileOnly libs.lombok
+    annotationProcessor libs.lombok
 }

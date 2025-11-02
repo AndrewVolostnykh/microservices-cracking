@@ -19,6 +19,7 @@ dependencies {
     implementation libs.kafka.streams
 
     runtimeOnly libs.postgres
+
     compileOnly libs.lombok
     annotationProcessor libs.lombok
 

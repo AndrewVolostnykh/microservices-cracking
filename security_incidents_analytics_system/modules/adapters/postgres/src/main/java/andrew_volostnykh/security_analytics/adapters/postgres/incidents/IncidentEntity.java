@@ -4,6 +4,7 @@ import andrew_volostnykh.security_analytics.adapters.postgres.AuditableEntity;
 import andrew_volostnykh.security_analytics.domain.incident.vo.IncidentStatus;
 import andrew_volostnykh.security_analytics.domain.incident.vo.Severity;
 import jakarta.persistence.Column;
+import jakarta.persistence.Convert;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
@@ -33,5 +34,5 @@ public class IncidentEntity extends AuditableEntity {
 	private double longitude;
 
 	@Column(name = "occurred_at")
-	private Instant occurredAt; // should it be instant?
+	private Instant occurredAt;
 }

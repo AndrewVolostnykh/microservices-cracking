@@ -4,6 +4,12 @@ spring-dep-management = "1.1.7"
 lombok = "1.18.30"
 kafka = "3.7.0"
 postgres = "42.7.2"
+elastic-clients = "8.14.0"
+
+### Spring
+[libraries.spring-boot-starter]
+group = "org.springframework.boot"
+name = "spring-boot-starter"
 
 [libraries.spring-web]
 group = "org.springframework.boot"
@@ -28,6 +34,10 @@ version.ref = "spring-boot"
 group = "org.springframework.boot"
 name = "spring-boot-starter-test"
 
+[libraries.spring-kafka]
+group = "org.springframework.kafka"
+name = "spring-kafka"
+
 # --- Other dependencies
 [libraries.kafka-streams]
 group = "org.apache.kafka"
@@ -38,6 +48,15 @@ version.ref = "kafka"
 group = "org.postgresql"
 name = "postgresql"
 version.ref = "postgres"
+
+[libraries.elastic-clients]
+group = "co.elastic.clients"
+name = "elasticsearch-java"
+version.ref = "elastic-clients"
+
+[libraries.jackson-databind]
+group = "com.fasterxml.jackson.core"
+name = "jackson-databind"
 
 [libraries.lombok]
 group = "org.projectlombok"

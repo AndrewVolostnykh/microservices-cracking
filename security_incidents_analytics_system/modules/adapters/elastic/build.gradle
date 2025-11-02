@@ -3,4 +3,8 @@ dependencies {
     implementation project(':modules:domain')
 
     implementation libs.spring.elastic
+    implementation libs.elastic.clients
+
+    compileOnly libs.lombok
+    annotationProcessor libs.lombok
 }
