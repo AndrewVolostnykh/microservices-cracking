@@ -23,12 +23,12 @@ public class IncidentsAnalyticDocument {
 	@Id
 	private String id;
 
-	@Field(type = FieldType.Integer)
+	@Field(type = FieldType.Integer, name = "falseReportsCount")
 	private Long falseReportsCount;
 
-	@Field(type = FieldType.Integer)
+	@Field(type = FieldType.Integer, name = "likesCount")
 	private int likesCount;
 
-	@Field(type = FieldType.Date)
+	@Field(type = FieldType.Date, name = "lastUpdateAt")
 	private Instant lastUpdateAt;
 }

@@ -7,5 +7,6 @@ public record ReportIncidentCommand(
 	int severity,
 	double latitude,
 	double longitude,
+	String description,
 	Instant occurredAt
 ) {}

@@ -1,6 +1,8 @@
 package andrew_volostnykh.security_analytics.adapters.elastic.incidents;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
@@ -11,8 +13,10 @@ import org.springframework.data.elasticsearch.core.geo.GeoPoint;
 import java.time.Instant;
 
 @Document(indexName = "incidents")
+@NoArgsConstructor
 @Getter
 @Setter
+@AllArgsConstructor
 public class IncidentDocument {
 
 	@Id

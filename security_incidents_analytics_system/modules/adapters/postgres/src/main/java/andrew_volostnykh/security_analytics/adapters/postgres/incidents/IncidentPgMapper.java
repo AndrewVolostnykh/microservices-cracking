@@ -1,6 +1,7 @@
 package andrew_volostnykh.security_analytics.adapters.postgres.incidents;
 
 import andrew_volostnykh.security_analytics.domain.incident.Incident;
+import andrew_volostnykh.security_analytics.domain.incident.vo.Description;
 import andrew_volostnykh.security_analytics.domain.incident.vo.IncidentId;
 import andrew_volostnykh.security_analytics.domain.incident.vo.Location;
 import andrew_volostnykh.security_analytics.domain.incident.vo.OccurredAt;
@@ -46,7 +47,7 @@ final class IncidentPgMapper {
 	}
 
 	public static Incident toDomain(IncidentEntity entity) {
-		return Incident.rehydrate(
+		return Incident.of(
 			new IncidentId(
 				entity.getId()
 			),
@@ -57,6 +58,9 @@ final class IncidentPgMapper {
 			entity.getStatus(),
 			new Location(
 				entity.getLatitude(), entity.getLongitude()
+			),
+			new Description(
+				entity.getDescription()
 			),
 			new OccurredAt(
 				entity.getOccurredAt()

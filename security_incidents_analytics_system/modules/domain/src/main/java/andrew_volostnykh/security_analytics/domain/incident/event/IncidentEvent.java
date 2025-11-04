@@ -2,12 +2,8 @@ package andrew_volostnykh.security_analytics.domain.incident.event;
 
 import andrew_volostnykh.security_analytics.domain.incident.vo.IncidentId;
 
-public record IncidentClosedEvent(
-	IncidentId id
-) implements IncidentEvent {
+public interface IncidentEvent
+	extends DomainEvent {
 
-	@Override
-	public IncidentId getId() {
-		return id;
-	}
+	IncidentId getId();
 }

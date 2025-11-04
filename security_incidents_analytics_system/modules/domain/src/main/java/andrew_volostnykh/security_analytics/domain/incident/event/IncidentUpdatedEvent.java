@@ -6,6 +6,10 @@ import andrew_volostnykh.security_analytics.domain.incident.vo.Severity;
 public record IncidentUpdatedEvent (
 	IncidentId id,
 	Severity newSeverity
-) implements Event {
+) implements IncidentEvent {
 
+	@Override
+	public IncidentId getId() {
+		return id;
+	}
 }

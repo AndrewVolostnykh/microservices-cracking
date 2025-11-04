@@ -29,6 +29,7 @@ public class ReportIncidentUseCase
 			Severity.getById(command.severity()),
 			command.latitude(),
 			command.longitude(),
+			command.description(),
 			command.occurredAt()
 		);
 
@@ -36,7 +37,7 @@ public class ReportIncidentUseCase
 
 		incident.getDomainEvents()
 			.forEach(
-				event -> publisherPort.publish(event)
+				publisherPort::publish
 		);
 	}
 }

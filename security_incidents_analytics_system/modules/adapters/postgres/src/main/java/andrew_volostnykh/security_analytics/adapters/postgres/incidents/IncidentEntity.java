@@ -31,7 +31,10 @@ public class IncidentEntity extends AuditableEntity {
 	private String reporterId;
 
 	private double latitude;
+
 	private double longitude;
+
+	private String description;
 
 	@Column(name = "occurred_at")
 	private Instant occurredAt;

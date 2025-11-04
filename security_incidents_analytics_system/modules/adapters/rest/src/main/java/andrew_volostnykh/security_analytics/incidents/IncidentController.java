@@ -38,6 +38,7 @@ public class IncidentController {
 				request.severity(),
 				request.latitude(),
 				request.longitude(),
+				request.description(),
 				request.occurredAt()
 			)
 		);

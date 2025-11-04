@@ -1,7 +1,8 @@
 package andrew_volostnykh.security_analytics.adapters.kafka.publishers;
 
 import andrew_volostnykh.security_analytics.application.incident.ports.outbound.IncidentEventPublisherOutPort;
-import andrew_volostnykh.security_analytics.domain.incident.event.IncidentReportedEvent;
+import andrew_volostnykh.security_analytics.domain.incident.event.IncidentEvent;
+import andrew_volostnykh.security_analytics.domain.incident.exceptions.ProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.kafka.core.KafkaTemplate;
@@ -16,18 +17,19 @@ public class KafkaIncidentEventPublisher
 	private final ObjectMapper objectMapper;
 
 	@Override
-	public void publish(IncidentReportedEvent event) {
+	public void publish(IncidentEvent event) {
 		try {
 			String payload = objectMapper.writeValueAsString(event);
 			kafkaTemplate.send(
 				"incidents.events",
-				event.incidentId(),
+				event.getId().value(),
 				payload
 			);
 
 			// TODO: replace with local exception
+			// TODO: dlq
 		} catch (Exception ex) {
-			throw new RuntimeException("Failed to publish Kafka event", ex);
+			throw new ProcessingException("Failed to publish Kafka event", ex);
 		}
 	}
 }

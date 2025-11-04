@@ -1,8 +1,8 @@
 package andrew_volostnykh.security_analytics.application.incident.ports.outbound;
 
-import andrew_volostnykh.security_analytics.domain.incident.event.IncidentReportedEvent;
+import andrew_volostnykh.security_analytics.domain.incident.event.IncidentEvent;
 
 public interface IncidentEventPublisherOutPort {
 
-	void publish(IncidentReportedEvent event);
+	void publish(IncidentEvent event);
 }
