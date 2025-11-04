@@ -34,6 +34,4 @@ public class IncidentDocument {
 
 	@Field(type = FieldType.Date)
 	private Instant createdAt;
-
-	// getters/setters/constructor
 }

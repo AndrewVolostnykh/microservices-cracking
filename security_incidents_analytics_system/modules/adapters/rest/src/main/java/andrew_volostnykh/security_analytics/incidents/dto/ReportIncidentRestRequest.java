@@ -1,8 +1,8 @@
-package andrew_volostnykh.security_analytics.dto;
+package andrew_volostnykh.security_analytics.incidents.dto;
 
 import java.time.Instant;
 
-public record ReportIncidentRequest(
+public record ReportIncidentRestRequest(
 	String reporterId,
 	int severity,
 	double latitude,

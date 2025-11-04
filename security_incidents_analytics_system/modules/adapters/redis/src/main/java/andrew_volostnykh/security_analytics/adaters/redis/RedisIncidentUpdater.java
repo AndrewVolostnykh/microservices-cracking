@@ -13,11 +13,10 @@ public class RedisIncidentUpdater
 	private final StringRedisTemplate redis;
 
 	@Override
-	public void incrementFalseReports(String incidentId) {
-		// TODO: refactor to keyBuilder
-		redis.opsForValue()
+	public Long incrementFalseReports(String incidentId) {
+		return redis.opsForValue()
 			.increment(
-				"incident:" + incidentId + ":falseReports"
+				IncidentFalseReportsKey.build(incidentId)
 			);
 	}
 }

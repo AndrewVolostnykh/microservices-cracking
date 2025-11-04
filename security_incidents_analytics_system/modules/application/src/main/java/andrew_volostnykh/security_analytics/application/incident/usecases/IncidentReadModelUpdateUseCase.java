@@ -15,11 +15,12 @@ public class IncidentReadModelUpdateUseCase
 	private final UpdateRedisOutPort redisPort;
 	private final UpdateElasticOutPort elasticPort;
 
+	// TODO: replace with false report event
 	@Override
 	public void handle(IncidentReportedEvent event) {
 
-		redisPort.incrementFalseReports(event.incidentId());
+		Long falseReportsCount = redisPort.incrementFalseReports(event.incidentId());
 
-		elasticPort.scheduleUpdate(event.incidentId());
+		elasticPort.update(event.incidentId(), falseReportsCount);
 	}
 }

@@ -12,7 +12,6 @@ dependencies {
     implementation project(':modules:adapters:redis')
     implementation project(':modules:adapters:elastic')
 
-    implementation libs.spring.web
     implementation libs.spring.jpa
     implementation libs.spring.elastic
     implementation libs.spring.redis

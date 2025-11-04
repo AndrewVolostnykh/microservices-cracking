@@ -1,0 +1,15 @@
+plugins {
+    alias(libs.plugins.spring.boot)
+    alias(libs.plugins.spring.dep.management)
+    id 'java'
+}
+
+dependencies {
+    implementation project(':modules:application')
+    implementation project(':modules:domain')
+
+    implementation libs.spring.web
+
+    compileOnly libs.lombok
+    annotationProcessor libs.lombok
+}

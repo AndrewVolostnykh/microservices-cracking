@@ -6,6 +6,7 @@ include 'modules:adapters:kafka'
 include 'modules:adapters:postgres'
 include 'modules:adapters:redis'
 include 'modules:adapters:elastic'
+include 'modules:adapters:rest'
 include 'modules:bootstrap'
 
 dependencyResolutionManagement {
