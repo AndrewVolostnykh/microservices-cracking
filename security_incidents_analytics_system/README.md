@@ -48,8 +48,8 @@ DDD, Hexagonal
 
 ### TODO:
 
-✅ Додати outbox патерн
-✅ Додати retry + DLQ для Kafka
-✅ Додати idempotency key в Redis
-✅ Додати bulk sync in ES
-✅ Вивести через Swagger UI / Grafana dashboard
+- Додати outbox патерн
+- Додати retry + DLQ для Kafka
+- Додати idempotency key в Redis
+- Додати bulk sync in ES
+- Вивести через Swagger UI / Grafana dashboard
